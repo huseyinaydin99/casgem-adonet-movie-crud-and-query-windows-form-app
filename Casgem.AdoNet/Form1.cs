@@ -19,16 +19,6 @@ namespace Casgem.AdoNet
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCategoryList_Click(object sender, EventArgs e)
         {
             SqlCommand command = new SqlCommand("Select * From Category");
@@ -45,7 +35,7 @@ namespace Casgem.AdoNet
             connection.Open();
             SqlCommand command = new SqlCommand("Insert Into Category(CategoryName) Values(@p1)");
             command.Connection = connection;
-            command.Parameters.Add("@p1", txtBoxCategoryName.Text);
+            command.Parameters.AddWithValue("@p1", txtBoxCategoryName.Text);
             command.ExecuteNonQuery();
             MessageBox.Show("Kategori başarılı bir şekilde kaydedildi","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
             connection.Close();

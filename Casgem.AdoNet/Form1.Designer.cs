@@ -149,7 +149,6 @@
             this.lblStatu.Size = new System.Drawing.Size(52, 16);
             this.lblStatu.TabIndex = 5;
             this.lblStatu.Text = "Durum: ";
-            this.lblStatu.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblCategoryName
             // 
@@ -240,7 +239,6 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Film İşlemleri";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button5
             // 
