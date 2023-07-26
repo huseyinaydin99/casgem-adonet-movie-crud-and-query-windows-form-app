@@ -96,7 +96,7 @@
             this.groupBox1.Controls.Add(this.lblCategoryName);
             this.groupBox1.Controls.Add(this.dataGridCategory);
             this.groupBox1.Controls.Add(this.lblCategoryID);
-            this.groupBox1.Location = new System.Drawing.Point(6, 94);
+            this.groupBox1.Location = new System.Drawing.Point(7, 94);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(372, 419);
             this.groupBox1.TabIndex = 0;
