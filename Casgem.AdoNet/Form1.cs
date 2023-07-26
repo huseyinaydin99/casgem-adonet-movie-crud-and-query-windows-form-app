@@ -37,7 +37,18 @@ namespace Casgem.AdoNet
             command.Connection = connection;
             command.Parameters.AddWithValue("@p1", txtBoxCategoryName.Text);
             command.ExecuteNonQuery();
-            MessageBox.Show("Kategori başarılı bir şekilde kaydedildi","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Kategori başarılı bir şekilde kaydedildi.","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
+        }
+
+        private void btnCategoryDelete_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("Delete From Category Where CategoryId = @p1");
+            command.Connection = connection;
+            command.Parameters.AddWithValue("@p1", txtBoxCategoryID.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Kategori başarılı bir şekilde silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             connection.Close();
         }
     }

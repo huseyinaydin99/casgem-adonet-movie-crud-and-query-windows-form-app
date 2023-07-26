@@ -121,6 +121,7 @@
             this.btnCategoryDelete.TabIndex = 10;
             this.btnCategoryDelete.Text = "Kategori Sil";
             this.btnCategoryDelete.UseVisualStyleBackColor = true;
+            this.btnCategoryDelete.Click += new System.EventHandler(this.btnCategoryDelete_Click);
             // 
             // btnCategoryAdd
             // 
