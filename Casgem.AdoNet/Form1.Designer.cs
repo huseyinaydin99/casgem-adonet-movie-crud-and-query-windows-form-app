@@ -84,6 +84,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox1.Controls.Add(this.btnCategoryUpdate);
             this.groupBox1.Controls.Add(this.btnCategoryDelete);
             this.groupBox1.Controls.Add(this.btnCategoryAdd);
@@ -185,6 +186,7 @@
             this.btnCategoryList.TabIndex = 8;
             this.btnCategoryList.Text = "Kategori Listesi";
             this.btnCategoryList.UseVisualStyleBackColor = true;
+            this.btnCategoryList.Click += new System.EventHandler(this.btnCategoryList_Click);
             // 
             // btnCategoryAdd
             // 
@@ -215,6 +217,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox2.Controls.Add(this.txtBoxCategory);
             this.groupBox2.Controls.Add(this.lblCategory);
             this.groupBox2.Controls.Add(this.txtBoxMovieDuration);
@@ -232,7 +235,7 @@
             this.groupBox2.Controls.Add(this.lblMovieID);
             this.groupBox2.Location = new System.Drawing.Point(433, 94);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(371, 419);
+            this.groupBox2.Size = new System.Drawing.Size(372, 427);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Film İşlemleri";
@@ -366,60 +369,66 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox3.Controls.Add(this.lblCategoryNumber);
             this.groupBox3.Location = new System.Drawing.Point(6, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(128, 76);
+            this.groupBox3.Size = new System.Drawing.Size(128, 77);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kategori Sayısı";
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox4.Controls.Add(this.lblMovieNumber);
             this.groupBox4.Location = new System.Drawing.Point(140, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(128, 76);
+            this.groupBox4.Size = new System.Drawing.Size(128, 77);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Film Sayısı";
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox5.Controls.Add(this.lblBestMovie);
             this.groupBox5.Location = new System.Drawing.Point(274, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(128, 76);
+            this.groupBox5.Size = new System.Drawing.Size(128, 77);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "En Başarılı Film";
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox6.Controls.Add(this.lblScienceFictionNumber);
             this.groupBox6.Location = new System.Drawing.Point(408, 12);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(143, 76);
+            this.groupBox6.Size = new System.Drawing.Size(143, 77);
             this.groupBox6.TabIndex = 16;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Bilim Kurgu Filmleri";
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox7.Controls.Add(this.lblAveragePoint);
             this.groupBox7.Location = new System.Drawing.Point(557, 12);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(115, 76);
+            this.groupBox7.Size = new System.Drawing.Size(115, 77);
             this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Ortalama Puan";
             // 
             // groupBox8
             // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox8.Controls.Add(this.lblMovieDurationNumber);
             this.groupBox8.Location = new System.Drawing.Point(691, 12);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(110, 76);
+            this.groupBox8.Size = new System.Drawing.Size(110, 77);
             this.groupBox8.TabIndex = 18;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Ortalama Süre";
