@@ -43,7 +43,7 @@ namespace Casgem.AdoNet
         {
             //((Button)sender).Text = "";
             connection.Open();
-            SqlCommand command = new SqlCommand("insert into Category(CategoryName) values(@p1)");
+            SqlCommand command = new SqlCommand("Insert Into Category(CategoryName) Values(@p1)");
             command.Connection = connection;
             command.Parameters.Add("@p1", txtBoxCategoryName.Text);
             command.ExecuteNonQuery();
