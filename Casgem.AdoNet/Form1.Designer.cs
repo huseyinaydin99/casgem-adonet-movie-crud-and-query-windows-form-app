@@ -196,6 +196,7 @@
             this.btnCategoryAdd.TabIndex = 9;
             this.btnCategoryAdd.Text = "Kategori Ekle";
             this.btnCategoryAdd.UseVisualStyleBackColor = true;
+            this.btnCategoryAdd.Click += new System.EventHandler(this.btnCategoryAdd_Click);
             // 
             // btnCategoryDelete
             // 

@@ -38,5 +38,17 @@ namespace Casgem.AdoNet
             adapter.Fill(dataTable);
             dataGridCategory.DataSource = dataTable;
         }
+
+        private void btnCategoryAdd_Click(object sender, EventArgs e)
+        {
+            //((Button)sender).Text = "";
+            connection.Open();
+            SqlCommand command = new SqlCommand("insert into Category(CategoryName) values(@p1)");
+            command.Connection = connection;
+            command.Parameters.Add("@p1", txtBoxCategoryName.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Kategori başarılı bir şekilde kaydedildi","Bilgi",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            connection.Close();
+        }
     }
 }
