@@ -43,15 +43,16 @@
             this.dataGridCategory = new System.Windows.Forms.DataGridView();
             this.lblCategoryID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.txtBoxMovieDuration = new System.Windows.Forms.TextBox();
             this.lblMovieDuration = new System.Windows.Forms.Label();
             this.txtBoxImdbPoint = new System.Windows.Forms.TextBox();
             this.lblImdbPoint = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnRemoveMovie = new System.Windows.Forms.Button();
+            this.btnMovieAdd = new System.Windows.Forms.Button();
+            this.btnMovieList = new System.Windows.Forms.Button();
             this.txtBoxMovieName = new System.Windows.Forms.TextBox();
             this.txtBoxMovieID = new System.Windows.Forms.TextBox();
             this.lblMovieName = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@
             this.lblAveragePoint = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lblMovieDurationNumber = new System.Windows.Forms.Label();
-            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -226,10 +226,10 @@
             this.groupBox2.Controls.Add(this.lblMovieDuration);
             this.groupBox2.Controls.Add(this.txtBoxImdbPoint);
             this.groupBox2.Controls.Add(this.lblImdbPoint);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button8);
+            this.groupBox2.Controls.Add(this.btnUpdate);
+            this.groupBox2.Controls.Add(this.btnRemoveMovie);
+            this.groupBox2.Controls.Add(this.btnMovieAdd);
+            this.groupBox2.Controls.Add(this.btnMovieList);
             this.groupBox2.Controls.Add(this.txtBoxMovieName);
             this.groupBox2.Controls.Add(this.txtBoxMovieID);
             this.groupBox2.Controls.Add(this.lblMovieName);
@@ -241,6 +241,15 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Film İşlemleri";
+            // 
+            // comboCategory
+            // 
+            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(85, 289);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(306, 24);
+            this.comboCategory.TabIndex = 17;
             // 
             // lblCategory
             // 
@@ -283,42 +292,45 @@
             this.lblImdbPoint.TabIndex = 12;
             this.lblImdbPoint.Text = "IMDB Puanı:";
             // 
-            // button5
+            // btnUpdate
             // 
-            this.button5.Location = new System.Drawing.Point(293, 364);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 42);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Film Güncelle";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(293, 364);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(100, 42);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "Film Güncelle";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // button6
+            // btnRemoveMovie
             // 
-            this.button6.Location = new System.Drawing.Point(187, 364);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 42);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Film Sil";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnRemoveMovie.Location = new System.Drawing.Point(187, 364);
+            this.btnRemoveMovie.Name = "btnRemoveMovie";
+            this.btnRemoveMovie.Size = new System.Drawing.Size(101, 42);
+            this.btnRemoveMovie.TabIndex = 10;
+            this.btnRemoveMovie.Text = "Film Sil";
+            this.btnRemoveMovie.UseVisualStyleBackColor = true;
+            this.btnRemoveMovie.Click += new System.EventHandler(this.btnRemoveMovie_Click);
             // 
-            // button7
+            // btnMovieAdd
             // 
-            this.button7.Location = new System.Drawing.Point(294, 316);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 42);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Film Ekle";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnMovieAdd.Location = new System.Drawing.Point(294, 316);
+            this.btnMovieAdd.Name = "btnMovieAdd";
+            this.btnMovieAdd.Size = new System.Drawing.Size(99, 42);
+            this.btnMovieAdd.TabIndex = 9;
+            this.btnMovieAdd.Text = "Film Ekle";
+            this.btnMovieAdd.UseVisualStyleBackColor = true;
+            this.btnMovieAdd.Click += new System.EventHandler(this.btnMovieAdd_Click);
             // 
-            // button8
+            // btnMovieList
             // 
-            this.button8.Location = new System.Drawing.Point(187, 316);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(101, 42);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "Film Listesi";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnMovieList.Location = new System.Drawing.Point(187, 316);
+            this.btnMovieList.Name = "btnMovieList";
+            this.btnMovieList.Size = new System.Drawing.Size(101, 42);
+            this.btnMovieList.TabIndex = 8;
+            this.btnMovieList.Text = "Film Listesi";
+            this.btnMovieList.UseVisualStyleBackColor = true;
+            this.btnMovieList.Click += new System.EventHandler(this.btnMovieList_Click);
             // 
             // txtBoxMovieName
             // 
@@ -488,15 +500,6 @@
             this.lblMovieDurationNumber.TabIndex = 24;
             this.lblMovieDurationNumber.Text = "0";
             // 
-            // comboCategory
-            // 
-            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Location = new System.Drawing.Point(85, 289);
-            this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(306, 24);
-            this.comboCategory.TabIndex = 17;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -559,10 +562,10 @@
         private System.Windows.Forms.Label lblMovieDuration;
         private System.Windows.Forms.TextBox txtBoxImdbPoint;
         private System.Windows.Forms.Label lblImdbPoint;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnRemoveMovie;
+        private System.Windows.Forms.Button btnMovieAdd;
+        private System.Windows.Forms.Button btnMovieList;
         private System.Windows.Forms.TextBox txtBoxMovieName;
         private System.Windows.Forms.TextBox txtBoxMovieID;
         private System.Windows.Forms.Label lblMovieName;

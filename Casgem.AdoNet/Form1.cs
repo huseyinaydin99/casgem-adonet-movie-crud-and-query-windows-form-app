@@ -111,5 +111,58 @@ namespace Casgem.AdoNet
             sqlDataAdapter.Fill(dt);
             dataGridMovie.DataSource = dt;
         }
+
+        private void btnMovieList_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand("Select * From Movie", connection);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sqlDataAdapter.Fill(dt);
+            dataGridMovie.DataSource = dt;
+        }
+
+        private void btnMovieAdd_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            connection.BeginTransaction();
+            SqlCommand command = new SqlCommand("Insert Into Movie(MovieName, MovieIBDM, MovieDuration, MovieCategory) Values(@p1, @p2, @p3, @p4);", connection);
+            command.Parameters.AddWithValue("@p1", txtBoxMovieName.Text);
+            command.Parameters.AddWithValue("@p2", txtBoxImdbPoint.Text);
+            command.Parameters.AddWithValue("@p3", txtBoxMovieDuration.Text);
+            command.Parameters.AddWithValue("@p4", comboCategory.SelectedValue);
+            var degisenKayitSayisi = command.ExecuteNonQuery();
+            MessageBox.Show($"Film kaydedildi. Değişen kayıt sayısı {degisenKayitSayisi}", "Bilgi.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            command.Transaction.Commit();
+            connection.Close();
+        }
+
+        private void btnRemoveMovie_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            connection.BeginTransaction();
+            SqlCommand command = new SqlCommand("Delete From Movie Where MovieId = @p1", connection);
+            command.Parameters.AddWithValue("@p1", txtBoxMovieID.Text);
+            var degisenKayitSayisi = command.ExecuteNonQuery();
+            MessageBox.Show($"Film silindi. Değişen kayıt sayısı {degisenKayitSayisi}", "Bilgi.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            command.Transaction.Commit();
+            connection.Close();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            connection.BeginTransaction();
+            SqlCommand command = new SqlCommand("Update Movie Set MovieName=@p1, MovieIMBD = @p2, MovieDuration = @p3 MovieCategory = @p4 Where MovieID = @p5", connection);
+            command.Parameters.AddWithValue("@p1", txtBoxMovieID.Text);
+            command.Parameters.AddWithValue("@p2", txtBoxImdbPoint.Text);
+            command.Parameters.AddWithValue("@p3", txtBoxMovieDuration.Text);
+            command.Parameters.AddWithValue("@p4", comboCategory.SelectedValue);
+            command.Parameters.AddWithValue("@p5", txtBoxMovieID.Text);
+            var degisenKayitSayisi = command.ExecuteNonQuery();
+            MessageBox.Show($"Film güncellendi. Değişen kayıt sayısı {degisenKayitSayisi}", "Bilgi.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            command.Transaction.Commit();
+            connection.Close();
+        }
     }
 }
