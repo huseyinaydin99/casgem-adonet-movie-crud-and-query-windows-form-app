@@ -160,7 +160,7 @@ namespace Casgem.AdoNet
             command.Parameters.AddWithValue("@p4", comboCategory.SelectedValue);
             command.Parameters.AddWithValue("@p5", txtBoxMovieID.Text);
             var degisenKayitSayisi = command.ExecuteNonQuery();
-            MessageBox.Show($"Film güncellendi. Değişen kayıt sayısı {degisenKayitSayisi}", "Bilgi.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show($"Film güncellendi. Değişen kayıt sayısı {degisenKayitSayisi}", "Bilgi.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             command.Transaction.Commit();
             connection.Close();
         }
