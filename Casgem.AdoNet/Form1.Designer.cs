@@ -43,7 +43,6 @@
             this.dataGridCategory = new System.Windows.Forms.DataGridView();
             this.lblCategoryID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtBoxCategory = new System.Windows.Forms.TextBox();
             this.lblCategory = new System.Windows.Forms.Label();
             this.txtBoxMovieDuration = new System.Windows.Forms.TextBox();
             this.lblMovieDuration = new System.Windows.Forms.Label();
@@ -70,6 +69,7 @@
             this.lblAveragePoint = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lblMovieDurationNumber = new System.Windows.Forms.Label();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -220,7 +220,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox2.Controls.Add(this.txtBoxCategory);
+            this.groupBox2.Controls.Add(this.comboCategory);
             this.groupBox2.Controls.Add(this.lblCategory);
             this.groupBox2.Controls.Add(this.txtBoxMovieDuration);
             this.groupBox2.Controls.Add(this.lblMovieDuration);
@@ -241,13 +241,6 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Film İşlemleri";
-            // 
-            // txtBoxCategory
-            // 
-            this.txtBoxCategory.Location = new System.Drawing.Point(85, 288);
-            this.txtBoxCategory.Name = "txtBoxCategory";
-            this.txtBoxCategory.Size = new System.Drawing.Size(308, 22);
-            this.txtBoxCategory.TabIndex = 17;
             // 
             // lblCategory
             // 
@@ -384,7 +377,7 @@
             // 
             this.lblCategoryNumber.AutoSize = true;
             this.lblCategoryNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCategoryNumber.Location = new System.Drawing.Point(46, 30);
+            this.lblCategoryNumber.Location = new System.Drawing.Point(53, 30);
             this.lblCategoryNumber.Name = "lblCategoryNumber";
             this.lblCategoryNumber.Size = new System.Drawing.Size(26, 29);
             this.lblCategoryNumber.TabIndex = 19;
@@ -405,7 +398,7 @@
             // 
             this.lblMovieNumber.AutoSize = true;
             this.lblMovieNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMovieNumber.Location = new System.Drawing.Point(51, 30);
+            this.lblMovieNumber.Location = new System.Drawing.Point(56, 30);
             this.lblMovieNumber.Name = "lblMovieNumber";
             this.lblMovieNumber.Size = new System.Drawing.Size(26, 29);
             this.lblMovieNumber.TabIndex = 20;
@@ -447,7 +440,7 @@
             // 
             this.lblScienceFictionNumber.AutoSize = true;
             this.lblScienceFictionNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblScienceFictionNumber.Location = new System.Drawing.Point(50, 30);
+            this.lblScienceFictionNumber.Location = new System.Drawing.Point(55, 30);
             this.lblScienceFictionNumber.Name = "lblScienceFictionNumber";
             this.lblScienceFictionNumber.Size = new System.Drawing.Size(26, 29);
             this.lblScienceFictionNumber.TabIndex = 22;
@@ -468,7 +461,7 @@
             // 
             this.lblAveragePoint.AutoSize = true;
             this.lblAveragePoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAveragePoint.Location = new System.Drawing.Point(53, 30);
+            this.lblAveragePoint.Location = new System.Drawing.Point(45, 30);
             this.lblAveragePoint.Name = "lblAveragePoint";
             this.lblAveragePoint.Size = new System.Drawing.Size(26, 29);
             this.lblAveragePoint.TabIndex = 23;
@@ -489,11 +482,20 @@
             // 
             this.lblMovieDurationNumber.AutoSize = true;
             this.lblMovieDurationNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMovieDurationNumber.Location = new System.Drawing.Point(51, 30);
+            this.lblMovieDurationNumber.Location = new System.Drawing.Point(44, 30);
             this.lblMovieDurationNumber.Name = "lblMovieDurationNumber";
             this.lblMovieDurationNumber.Size = new System.Drawing.Size(26, 29);
             this.lblMovieDurationNumber.TabIndex = 24;
             this.lblMovieDurationNumber.Text = "0";
+            // 
+            // comboCategory
+            // 
+            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(85, 289);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(306, 24);
+            this.comboCategory.TabIndex = 17;
             // 
             // Form1
             // 
@@ -552,7 +554,6 @@
         private System.Windows.Forms.RadioButton radioDisable;
         private System.Windows.Forms.TextBox txtBoxCategoryName;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtBoxCategory;
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox txtBoxMovieDuration;
         private System.Windows.Forms.Label lblMovieDuration;
@@ -579,6 +580,7 @@
         private System.Windows.Forms.Label lblAveragePoint;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label lblMovieDurationNumber;
+        private System.Windows.Forms.ComboBox comboCategory;
     }
 }
 
