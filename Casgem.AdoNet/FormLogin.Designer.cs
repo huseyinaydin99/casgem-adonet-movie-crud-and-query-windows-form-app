@@ -40,42 +40,42 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(35, 37);
+            this.lblUsername.Location = new System.Drawing.Point(10, 18);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(44, 16);
+            this.lblUsername.Size = new System.Drawing.Size(85, 16);
             this.lblUsername.TabIndex = 0;
-            this.lblUsername.Text = "label1";
+            this.lblUsername.Text = "Kullanıcı Adı: ";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(35, 62);
+            this.lblPassword.Location = new System.Drawing.Point(10, 43);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(44, 16);
+            this.lblPassword.Size = new System.Drawing.Size(40, 16);
             this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "label1";
+            this.lblPassword.Text = "Şifre: ";
             // 
             // txtBoxUserName
             // 
-            this.txtBoxUserName.Location = new System.Drawing.Point(85, 31);
+            this.txtBoxUserName.Location = new System.Drawing.Point(101, 12);
             this.txtBoxUserName.Name = "txtBoxUserName";
-            this.txtBoxUserName.Size = new System.Drawing.Size(186, 22);
+            this.txtBoxUserName.Size = new System.Drawing.Size(208, 22);
             this.txtBoxUserName.TabIndex = 2;
             // 
             // txtBoxPassword
             // 
-            this.txtBoxPassword.Location = new System.Drawing.Point(85, 59);
+            this.txtBoxPassword.Location = new System.Drawing.Point(101, 37);
             this.txtBoxPassword.Name = "txtBoxPassword";
-            this.txtBoxPassword.Size = new System.Drawing.Size(186, 22);
+            this.txtBoxPassword.Size = new System.Drawing.Size(208, 22);
             this.txtBoxPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(196, 87);
+            this.btnLogin.Location = new System.Drawing.Point(13, 65);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 30);
+            this.btnLogin.Size = new System.Drawing.Size(296, 30);
             this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "button1";
+            this.btnLogin.Text = "Giriş Yap";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -89,14 +89,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(321, 108);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtBoxPassword);
             this.Controls.Add(this.txtBoxUserName);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Name = "FormLogin";
-            this.Text = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Giriş Formu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
