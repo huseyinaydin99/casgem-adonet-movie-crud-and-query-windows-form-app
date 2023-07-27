@@ -112,6 +112,7 @@
             this.btnCategoryUpdate.TabIndex = 11;
             this.btnCategoryUpdate.Text = "Kategori Güncelle";
             this.btnCategoryUpdate.UseVisualStyleBackColor = true;
+            this.btnCategoryUpdate.Click += new System.EventHandler(this.btnCategoryUpdate_Click);
             // 
             // btnCategoryDelete
             // 
@@ -324,6 +325,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "Film Listesi";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // txtBoxMovieName
             // 
@@ -511,6 +513,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Film ve Kategori İşlemleri Formu!";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategory)).EndInit();
