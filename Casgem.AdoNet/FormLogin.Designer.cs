@@ -49,7 +49,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(10, 43);
+            this.lblPassword.Location = new System.Drawing.Point(10, 41);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(40, 16);
             this.lblPassword.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.btnLogin.Location = new System.Drawing.Point(13, 65);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(296, 30);
+            this.btnLogin.Size = new System.Drawing.Size(296, 37);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Giriş Yap";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -95,6 +95,7 @@
             this.Controls.Add(this.txtBoxUserName);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
+            this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Formu";
