@@ -87,6 +87,7 @@ namespace Casgem.AdoNet
                 lblBestMovie.Text = reader2[0].ToString();
             }
             reader2.Close();
+            connection.Close();
             #endregion
 
             #region
