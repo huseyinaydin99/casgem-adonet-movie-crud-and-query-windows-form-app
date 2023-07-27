@@ -55,11 +55,13 @@ namespace Casgem.AdoNet
         private void btnCategoryUpdate_Click(object sender, EventArgs e)
         {
             connection.Open();
+            connection.BeginTransaction();
             SqlCommand command = new SqlCommand("Update Category Set CategoryName = @p1 Where CategoryId = @p2;", connection);
             command.Parameters.AddWithValue("@p1", txtBoxCategoryName.Text);
             command.Parameters.AddWithValue("@p2", txtBoxCategoryID.Text);
             command.ExecuteNonQuery();
             MessageBox.Show("Kategori başarılı bir şekilde güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            command.Transaction.Commit();
             connection.Close();
         }
 
