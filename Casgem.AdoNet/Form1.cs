@@ -88,6 +88,18 @@ namespace Casgem.AdoNet
             }
             reader2.Close();
             #endregion
+
+            #region
+            connection.Open();
+            SqlCommand command3 = new SqlCommand("Select * From Category", connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command3);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            comboCategory.DisplayMember = "CategoryName";
+            comboCategory.ValueMember = "CategoryID";
+            comboCategory.DataSource = dt;
+            connection.Close();
+            #endregion
         }
 
         private void button8_Click(object sender, EventArgs e)
