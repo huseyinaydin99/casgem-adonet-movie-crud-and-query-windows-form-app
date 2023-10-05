@@ -1,4 +1,4 @@
-# casgem-adonet-movie-crud-and-query-windows-form-app
+## casgem-adonet-movie-crud-and-query-windows-form-app
 Windows Form Uygulamasıdır. Film ve kategorileri üzerinde işlemler yapılmaktadır. Film ve kategori tabloları bire çok ilişkilidir. Amacım ADO.NET'i etkin bir şekilde kullanabilmek.
 
 ### Görseller:
